@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+header{
+    max-height: 16%;
+    align-items: center;
+    display: flex;
+    background-color: #00001a;
+    color: white;
+}
+div.navbar{
+    float: right;
+    display: inline-flex;
+}
+div.navbar span{
+    display: inline-block;
+    padding: 0 10px;
+    word-wrap: nowrap;
+}
+header img{
+    max-width: 10%;
+}
+div.logo{
+    font-size: 5ch;
+    font-weight: bold;
+    align-items: center;
+    width: 60%;
+    padding-left: 30px;
+}
+div.logo p{
+    display: inline;
+    color: #e6e600;
+}
+.flex-container#intro{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 86%;
+    background-image: url(imgs/intro_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div#intro div{
+    margin: 10% 15%;
+    padding: 1%;
+    background-color: rgba(227, 237, 240, 0.39);
+    border-radius: 30px;
+}
