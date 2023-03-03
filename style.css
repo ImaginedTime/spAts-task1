@@ -6,8 +6,10 @@ header{
     max-height: 16%;
     align-items: center;
     display: flex;
-    background-color: #00001a;
+    background-color: black;
     color: white;
+    width: 100vw;
+    position: fixed;
 }
 div.navbar{
     float: right;
@@ -33,7 +35,7 @@ div.logo p{
     color: #e6e600;
 }
 
-.flex-container#intro{
+.flex-container{
     display: flex;
     flex-direction: row-reverse;
     height: 86%;
@@ -42,12 +44,14 @@ div.logo p{
 .background{
     background-image: url(imgs/intro_bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 div#intro div{
-    margin: 10% 15%;
+    margin: 14% 15%;
     padding: 1%;
     background-color: rgba(227, 237, 240, 0.39);
     border-radius: 30px;
+    max-width: 40vw;
 }
 
