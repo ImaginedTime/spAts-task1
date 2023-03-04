@@ -12,6 +12,7 @@ header{
     position: fixed;
     z-index: 2;
 }
+
 div.navbar{
     float: right;
     display: inline-flex;
@@ -60,24 +61,47 @@ div#intro div{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 70vh;
+    flex-wrap: wrap;
+    row-gap: 1vh;
 }
-
 .bookcard{
-    width: 20vw;
+    width: 17vw;
+    height: 70vh;
+    background: transparent;
+    margin: 0 0.5vw;
+}
+.bookcard-inner{
     height: 100%;
-    display: grid;
+    width: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.bookcard:hover .bookcard-inner{
+    transform:rotateY(180deg);
+}
+.frontside-bookcard, .backside-bookcard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     background-color: #00001a;
     border-radius: 20px;
     color: white;
     justify-items: center;
     align-items: center;
 }
-
+.frontside-bookcard{
+    display: grid;
+}
+.backside-bookcard{
+    transform: rotateY(180deg);
+}
 .bookcard img{
     margin: 0 0;
     height: 90%;
-    width: 80%;
+    width: 100%;
     justify-self: center;
 }
 
@@ -86,7 +110,6 @@ section{
     display: grid;
     align-items: center;
 }
-
 .section-header{
     background-color: white;
     justify-self: center;
@@ -98,11 +121,13 @@ section{
     font-size: 4ch;
     border-radius: 60px;
     opacity: 60%;
+    margin: 2vh 0;
 }
 
 .search-bar{
     display: flex;
     justify-content: center;
+    margin-bottom: 2vh;
 }
 .search-bar input{
     width: 45vw;
@@ -113,7 +138,6 @@ section{
     color: white;
     font-size: 1.2em;
 }
-
 .search-bar button{
     padding: 0.5% 0;
     width: 5vw;
@@ -121,8 +145,43 @@ section{
     border-bottom-right-radius: 20px;
     font-size: 1.1em;
 }
-
 .search-bar button:hover{
     font-size: 1.2em;
     background-color: #e6e600;
+}
+
+.backtotop{
+    font-size: 3ch;
+    padding: 1%;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    position: fixed;
+    bottom: 3vh;
+    right: 3vh;
+    display: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #00001a;
+    color: white;
+    height: 10vh;
+}
+
+.copyrights{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.copyrights a{
+    color: white;
+}
+.socialmedia-links{
+    color: white;
+    display: flex;
+    justify-content: center;
 }
