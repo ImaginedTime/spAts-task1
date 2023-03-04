@@ -169,7 +169,9 @@ footer{
     align-content: center;
     background-color: #00001a;
     color: white;
-    height: 10vh;
+    height: 14vh;
+    row-gap: 20%;
+    margin-top: 3vh;
 }
 
 .copyrights{
@@ -177,11 +179,21 @@ footer{
     justify-content: center;
     flex-wrap: nowrap;
 }
+.copyrights span{
+    margin: 0 0.5%;
+}
 .copyrights a{
-    color: white;
+    color: grey;
 }
 .socialmedia-links{
-    color: white;
     display: flex;
     justify-content: center;
+}
+.socialmedia-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.socialmedia-links span{
+    margin: 0 1%;
 }
