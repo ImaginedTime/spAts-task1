@@ -68,7 +68,7 @@ div#intro div{
     height: 100%;
     display: grid;
     background-color: #00001a;
-    border-radius: 40px;
+    border-radius: 20px;
     color: white;
     justify-items: center;
     align-items: center;
@@ -98,4 +98,31 @@ section{
     font-size: 4ch;
     border-radius: 60px;
     opacity: 60%;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+}
+.search-bar input{
+    width: 45vw;
+    padding: 0.5% 2ch;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #00001a;
+    color: white;
+    font-size: 1.2em;
+}
+
+.search-bar button{
+    padding: 0.5% 0;
+    width: 5vw;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 1.1em;
+}
+
+.search-bar button:hover{
+    font-size: 1.2em;
+    background-color: #e6e600;
 }
