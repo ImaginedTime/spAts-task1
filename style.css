@@ -3,7 +3,8 @@ body {
 }
 
 header{
-    max-height: 16vh;
+    min-height: 10%;
+    max-height: 16%;
     align-items: center;
     display: flex;
     background-color: black;
@@ -21,6 +22,13 @@ div.navbar span{
     display: inline-block;
     padding: 0 10px;
     word-wrap: nowrap;
+}
+div.navbar a{
+    text-decoration: none;
+    color: white;
+}
+div.hamburger-menu{
+    display: none;
 }
 header img{
     max-width: 10%;
@@ -41,6 +49,7 @@ div.logo p{
     display: flex;
     height: 86%;
     justify-content: flex-end;
+    align-self: center;
 }
 .background{
     background-image: url(imgs/intro_bg.jpg);
@@ -50,6 +59,7 @@ div.logo p{
 }
 div#Intro div{
     margin: 14% 15%;
+    margin-top: 12%;
     padding: 1%;
     background-color: rgba(227, 237, 240, 0.39);
     border-radius: 30px;
@@ -80,9 +90,12 @@ div#Intro p.text{
     padding: 5% 5%;
     padding-bottom: 20%;
 }
-button.Bestsellers{
+div#Intro a{
     width: 40%;
-    padding: 3%;
+}
+button.Bestsellers{
+    width: 100%;
+    padding: 7% 3%;
     font-size: 2.3ch;
     background-color: #00001a;
     color: white;
@@ -157,6 +170,10 @@ section{
     min-height: 100vh;
     display: grid;
     align-items: center;
+    padding-top: 5%;
+}
+section#Intro{
+    padding-top: 0;
 }
 .section-header{
     background-color: white;
@@ -253,7 +270,7 @@ footer{
 }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 920px) {
 .bookcard{
     width:35vw;
     margin: 1vh 5vw;
@@ -264,12 +281,18 @@ footer{
 .search-bar button{
     width: 10vw;
 }
+.bookcard{
+    height:60vh;
+}
 }
 
 @media screen and (max-width: 650px) {
 .bookcard{
     width: 40vw;
     margin: 1vh 3vw;
+}
+.hamburger-menu{
+    display: inline-block;
 }
 }
 
@@ -300,6 +323,12 @@ div#intro div{
     margin: 8% 10%;
     min-width: 80vw;
     height: 50vh;
+}
+div#Intro h1{
+    font-size: 5ch;
+}
+section{
+    padding-top: 10vh;
 }
 }
 
