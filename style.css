@@ -3,7 +3,7 @@ body {
 }
 
 header{
-    max-height: 16%;
+    max-height: 16vh;
     align-items: center;
     display: flex;
     background-color: black;
@@ -48,13 +48,53 @@ div.logo p{
     background-size: cover;
     background-attachment: fixed;
 }
-div#intro div{
+div#Intro div{
     margin: 14% 15%;
     padding: 1%;
     background-color: rgba(227, 237, 240, 0.39);
     border-radius: 30px;
-    max-width: 40vw;
+    min-width: 300px;
+    max-width: 35vw;
     min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+div#Intro h1{
+    font-size: 6ch;
+    align-content: center;
+    margin: 0 0;
+    padding: 2%;
+    background-color: #00001a;
+    color: white;
+    opacity: 90%;
+    border-radius: 10px;
+}
+div#Intro h1 p{
+    color:#e6e600;
+    display: inline;
+    padding: 0 0;;
+}
+div#Intro p.text{
+    padding: 5% 5%;
+    padding-bottom: 20%;
+}
+button.Bestsellers{
+    width: 40%;
+    padding: 3%;
+    font-size: 2.3ch;
+    background-color: #00001a;
+    color: white;
+    border-radius: 15px;
+    border-color: #e6e600;
+    border-width: 3px;
+}
+button.Bestsellers p{
+    padding: 0 0;
+    margin: 0 0;
+    display: inline;
+    color: #e6e600;
 }
 
 .flex-container{
@@ -246,6 +286,20 @@ footer{
 }
 .section-header{
     font-size: 2.5ch;
+}
+.socialmedia-links span{
+    margin: 0 2vw;
+}
+.copyrights span{
+    margin: 0 0.75vw;
+}
+.flex-container#Intro{
+    justify-content: center;
+}
+div#intro div{
+    margin: 8% 10%;
+    min-width: 80vw;
+    height: 50vh;
 }
 }
 
