@@ -65,7 +65,7 @@ div#intro div{
     row-gap: 1vh;
 }
 .bookcard{
-    width: 17vw;
+    width: 20vw;
     height: 70vh;
     background: transparent;
     margin: 0 0.5vw;
@@ -94,15 +94,23 @@ div#intro div{
 }
 .frontside-bookcard{
     display: grid;
+    row-gap: 0;
 }
 .backside-bookcard{
     transform: rotateY(180deg);
 }
-.bookcard img{
-    margin: 0 0;
+.bookimg{
     height: 90%;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: grid;
+}
+.bookcard img{
+    margin: 0 0;
+    width: 100%;
     justify-self: center;
+    align-self: center;
 }
 
 section{
@@ -196,4 +204,54 @@ footer{
 }
 .socialmedia-links span{
     margin: 0 1%;
+}
+
+@media  screen and ((max-width:1100px) and (min-width:850px)) {
+.bookcard{
+    width: 25vw;
+    margin: 1vh 3vw;
+}
+}
+
+@media screen and (max-width: 850px) {
+.bookcard{
+    width:35vw;
+    margin: 1vh 5vw;
+}
+.search-bar input{
+    width: 55vw;
+}
+.search-bar button{
+    width: 10vw;
+}
+}
+
+@media screen and (max-width: 650px) {
+.bookcard{
+    width: 40vw;
+    margin: 1vh 3vw;
+}
+}
+
+@media screen and (max-width: 460px) {
+.bookcard{
+    width: 65vw;
+    margin: 1vh 4vw;
+}  
+.search-bar input{
+    width: 70vw;
+}
+.search-bar button{
+    width: 15vw;
+}
+.section-header{
+    font-size: 2.5ch;
+}
+}
+
+@media screen and (max-width: 400px) {
+    .bookcard{
+        width:75vw;
+        margin: 1vh 4vw;
+    }   
 }
