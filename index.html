@@ -7,6 +7,7 @@
 </head>
 <body>
 <header>
+    <div class="left-navbar">
     <div class="logo"><img src="imgs/logo.jpg"></div>
     <div class="title">
         <span class="headline"><p>B</p>ook <p>M</p>ania</span>
@@ -14,11 +15,12 @@
     <div class="hamburger-menu">
         <p>Menu</p>
     </div>
+    </div>
     <div class="navbar">
         <span><a href="#Intro">Intro</a></span>
         <span><a href="#BestSellers">BestSellers</a></span>
         <span><a href="#Recommendations">Recommendations</a></span>
-        <span><a url="">Reviews</a></span>
+        <span><a href="#Reviews">Reviews</a></span>
     </div>
 </header>
 <div class="background">
@@ -142,7 +144,19 @@
     </div>
 </div>
 </section>
-<div class="flex-container" id="Reviews"></div>
+<section id="Reviews">
+<div class="section-header"><b>Reviews</b></div>
+<div class="flex-container" id="Reviews">
+
+</div>
+<div class="reviews">
+    <form class="review-form">
+        <textarea placeholder="Enter your reviews..." id="review-text"></textarea>
+        <input type="email" placeholder="Enter your email..." id="review-email">
+        <button id="review-submit">Submit</button>
+    </form>
+</div>
+</section>
 <footer>
 <div class="socialmedia-links">
     <span><a href="https:\\facebook.com\" class="fa fa-facebook"></a></span>

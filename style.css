@@ -3,8 +3,7 @@ body {
 }
 
 header{
-    min-height: 10%;
-    max-height: 50%;
+    min-height: 9vh;
     align-items: center;
     display: flex;
     background-color: black;
@@ -12,11 +11,17 @@ header{
     width: 100vw;
     position: fixed;
     z-index: 2;
+    justify-content: space-between;
 }
 
 div.navbar{
     float: right;
     display: inline-flex;
+    padding-right: 4%;
+}
+div.left-navbar{
+    display: flex;
+    align-items: center;
 }
 div.navbar span{
     display: inline-block;
@@ -34,17 +39,16 @@ header img{
     max-width: 80%;
 }
 div.logo{
-    flex: 0 0 13%;
+    flex: 0 0 20%;
 }
 div.title{
     font-size: 5ch;
     font-weight: bold;
     align-items: center;
-    flex: 0 0 55%;
 }
 div.title p{
     display: inline;
-    color: #e6e600;
+    color: #FFED00;
 }
 
 .flex-container#Intro{
@@ -58,6 +62,8 @@ div.title p{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 div#Intro div{
     margin: 14% 15%;
@@ -78,7 +84,7 @@ div#Intro h1{
     align-content: center;
     margin: 0 0;
     padding: 2%;
-    background-color: #00001a;
+    background-color: rgba(0, 0, 26, 1);
     color: white;
     opacity: 90%;
     border-radius: 10px;
@@ -121,7 +127,7 @@ button.Bestsellers p{
 }
 .bookcard{
     width: 20vw;
-    height: 70vh;
+    height: 35vw;
     background: transparent;
     margin: 0 0.5vw;
 }
@@ -141,7 +147,7 @@ button.Bestsellers p{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background-color: #00001a;
+    background-color: rgba(0, 0, 26, 0.9);
     border-radius: 20px;
     color: white;
     justify-items: center;
@@ -150,7 +156,7 @@ button.Bestsellers p{
 .frontside-bookcard{
     display: grid;
     row-gap: 0;
-    grid-template-rows: 77% 23%;
+    grid-template-rows: 80% 20%;
 }
 .backside-bookcard{
     display: grid;
@@ -257,7 +263,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background-color: #00001a;
+    background-color: rgba(0, 0, 0, 0.85);
     color: white;
     height: 14vh;
     row-gap: 20%;
@@ -288,6 +294,49 @@ footer{
     margin: 0 1%;
 }
 
+div.reviews{
+    width: 80vw;
+    justify-self: center;
+    height: 40vh;
+    border-radius: 40px;
+    background-color: rgba(227, 237, 240, 0.39);
+}
+.review-form{
+    display: grid;
+    grid-template-columns: 5% 70% auto 5%;
+    grid-template-rows: 8% auto 14% 8%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+#review-text{
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    width: 95%;
+    height: 95%;
+    resize: none;
+    border-radius: 20px;
+    padding-left: 3ch;
+    padding-top: 1ch;
+}
+#review-email{
+    grid-column: 2;
+    grid-row: 3;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    padding-left: 2ch;
+}
+#review-submit{
+    grid-column: 3;
+    grid-row: 3;
+    width: 80%;
+    height: 70%;
+    margin-right: 15%;
+    border-radius: 10px;
+}
+
+
 @media  screen and ((max-width:1100px) and (min-width:850px)) {
 .bookcard{
     width: 25vw;
@@ -311,17 +360,17 @@ footer{
 }
 }
 
-@media screen and (max-width: 650px) {
-.bookcard{
-    width: 40vw;
-    margin: 1vh 3vw;
-}
+@media screen and (max-width: 800px) {
 .hamburger-menu{
     display: block;
-    flex: 0 0 10%;
+    margin-right: 10%;
 }
 div.title{
     flex: 0 0 75%;
+    font-size: 6ch;
+}
+div.left-navbar{
+    flex: 0 0 95%;
 }
 div.navbar{
     flex: 0 0 100%;
@@ -330,10 +379,26 @@ div.navbar{
     justify-content: space-around;
     flex-direction: column;
     padding-top: 3%;
-    row-gap: 100%;
+    padding-bottom: 4%;
+}
+div.navbar span{
+    padding-top: 1%;
+    font-size: 2.5ch;
+}
+.logo{
+    flex: 0 0 30%
 }
 header{
     flex-wrap: wrap;
+    justify-content: flex-start;
+}
+    
+}
+
+@media screen and (max-width: 650px) {
+.bookcard{
+    width: 40vw;
+    margin: 1vh 3vw;
 }
 }
 
@@ -370,6 +435,9 @@ div#Intro h1{
 }
 section{
     padding-top: 10vh;
+}
+div.reviews{
+    width: 90vw;
 }
 }
 
