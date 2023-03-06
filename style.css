@@ -4,7 +4,7 @@ body {
 
 header{
     min-height: 10%;
-    max-height: 16%;
+    max-height: 50%;
     align-items: center;
     display: flex;
     background-color: black;
@@ -31,16 +31,18 @@ div.hamburger-menu{
     display: none;
 }
 header img{
-    max-width: 10%;
+    max-width: 80%;
 }
 div.logo{
+    flex: 0 0 13%;
+}
+div.title{
     font-size: 5ch;
     font-weight: bold;
     align-items: center;
-    width: 60%;
-    padding-left: 30px;
+    flex: 0 0 55%;
 }
-div.logo p{
+div.title p{
     display: inline;
     color: #e6e600;
 }
@@ -148,13 +150,19 @@ button.Bestsellers p{
 .frontside-bookcard{
     display: grid;
     row-gap: 0;
+    grid-template-rows: 77% 23%;
 }
 .backside-bookcard{
+    display: grid;
     transform: rotateY(180deg);
+    justify-content: center;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 60% 20% 20%;
 }
 .bookimg{
     height: 90%;
     width: 100%;
+    grid-row: 1;
     overflow-x: hidden;
     overflow-y: hidden;
     display: grid;
@@ -164,6 +172,23 @@ button.Bestsellers p{
     width: 100%;
     justify-self: center;
     align-self: center;
+}
+.booktitle{
+    grid-row: 2;
+}
+.backside-bookcard p{
+    grid-row: 1;
+    grid-column: 2;
+}
+.add-to-cart{
+    width: 50%;
+    grid-row: 3;
+    grid-column: 2;
+    font-weight: bold;  
+}
+.add-to-cart:focus{
+    background-color: #e6e600;
+    border-color: white;
 }
 
 section{
@@ -292,11 +317,24 @@ footer{
     margin: 1vh 3vw;
 }
 .hamburger-menu{
-    display: inline-block;
+    display: block;
+    flex: 0 0 10%;
 }
-
-
-
+div.title{
+    flex: 0 0 75%;
+}
+div.navbar{
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 3%;
+    row-gap: 100%;
+}
+header{
+    flex-wrap: wrap;
+}
 }
 
 @media screen and (max-width: 460px) {
