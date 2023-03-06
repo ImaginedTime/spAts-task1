@@ -32,9 +32,6 @@ div.navbar a{
     text-decoration: none;
     color: white;
 }
-div.hamburger-menu{
-    display: none;
-}
 header img{
     max-width: 80%;
 }
@@ -71,7 +68,7 @@ div#Intro div{
     padding: 1%;
     background-color: rgba(227, 237, 240, 0.39);
     border-radius: 30px;
-    min-width: 300px;
+    min-width: 350px;
     max-width: 35vw;
     min-height: 40vh;
     display: flex;
@@ -360,21 +357,27 @@ div.reviews{
 }
 }
 
+@media screen and (min-width: 801px) {
+div.hamburger-menu{
+    display: none;
+}
+}
+
 @media screen and (max-width: 800px) {
 .hamburger-menu{
     display: block;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 div.title{
     flex: 0 0 75%;
     font-size: 6ch;
 }
 div.left-navbar{
-    flex: 0 0 95%;
+    flex: 0 0 98%;
 }
 div.navbar{
     flex: 0 0 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
@@ -392,7 +395,7 @@ header{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-    
+  
 }
 
 @media screen and (max-width: 650px) {
@@ -446,4 +449,10 @@ div.reviews{
         width:75vw;
         margin: 1vh 4vw;
     }   
+    div.title{
+        font-size: 4.5ch;
+    }
+    div.navbar{
+        font-size: 1.5ch;
+    }
 }
