@@ -188,9 +188,10 @@ button.Bestsellers p{
     grid-row: 3;
     grid-column: 2;
     font-weight: bold;  
+    border-color: black;
 }
 .add-to-cart:focus{
-    background-color: #e6e600;
+    background-color:chartreuse;
     border-color: white;
 }
 
@@ -292,14 +293,40 @@ footer{
     margin: 0 1%;
 }
 
-div.reviews{
+div.reviews-holder{
+    width: 70vw;
+    height: 60vh;
+    align-self: center;
+    justify-self: center;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+
+div.review-form{
     width: 80vw;
     justify-self: center;
     height: 40vh;
     border-radius: 40px;
     background-color: rgba(227, 237, 240, 0.39);
 }
-.review-form{
+form.review-form{
     display: grid;
     grid-template-columns: 5% 70% auto 5%;
     grid-template-rows: 8% auto 14% 8%;
@@ -440,8 +467,11 @@ div#Intro h1{
 section{
     padding-top: 10vh;
 }
-div.reviews{
+div.review-form{
     width: 90vw;
+}
+.copyrights{
+    font-size: 0.7em;
 }
 }
 

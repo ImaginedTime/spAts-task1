@@ -147,10 +147,13 @@
 </section>
 <section id="Reviews">
 <div class="section-header"><b>Reviews</b></div>
-<div class="flex-container" id="Reviews">
-
+<div class="reviews-holder" id="Reviews">
+    <div class="review"></div>
+    <div class="review"></div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<div class="reviews">
+<div class="review-form">
     <form class="review-form">
         <textarea placeholder="Enter your reviews..." id="review-text"></textarea>
         <input type="email" placeholder="Enter your email..." id="review-email">
@@ -166,7 +169,7 @@
 </div>
 <div class="copyrights">
     <span><a href="">Terms and Conditions</a></span>
-    <span><a href="">Copyrights</a></span>
+    <span><a href="" class="fa fa-copyright"> Copyrights</a></span>
     <span><a href="">Privacy Policy</a></span>
 </div>
 </footer>
