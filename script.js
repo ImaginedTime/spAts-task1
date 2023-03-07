@@ -17,6 +17,7 @@ function scrollfunction(){
 var currentslide = 0;
 function changeslide(n){
     let reviews = document.getElementsByClassName("review");
+    let dots = document.getElementsByClassName("dot");
     if ((currentslide+n) >= reviews.length){
         currentslide = 0;
     }
@@ -28,8 +29,32 @@ function changeslide(n){
     }
     for (let i=0; i < reviews.length; i++){
         reviews[i].style.display = "none";
+        dots[i].className = "dot"
     }
-    console.log(reviews);
-    console.log(currentslide);
     reviews[currentslide].style.display = "grid";
+    dots[currentslide].className += " activedot";
+}
+
+function setslide(n){
+    let reviews = document.getElementsByClassName("review");
+    let dots = document.getElementsByClassName("dot");
+    currentslide = n;
+    for (let i=0; i < reviews.length; i++){
+        reviews[i].style.display = "none";
+        dots[i].className = "dot"
+    }
+    reviews[currentslide].style.display = "grid";
+    dots[currentslide].className += " activedot";
+}
+
+function init(){
+    let reviews = document.getElementsByClassName("review");
+    let reviewholder = document.getElementsByClassName("dots")[0];
+    for (let i=0; i<reviews.length; i++){
+        let dot = document.createElement("span");
+        dot.className = "dot";
+        dot.setAttribute("onclick", `setslide(${i})`);
+        reviewholder.appendChild(dot);
+    }
+    setslide(0);
 }

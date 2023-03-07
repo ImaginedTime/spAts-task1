@@ -312,7 +312,6 @@ div.reviews-holder{
     margin: 5% 0%;
     align-self: center;
     justify-self: center;
-    padding-bottom: 2%;
     display: grid;
 }
 .prev, .next {
@@ -376,6 +375,27 @@ img.review-img{
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+}
+.dots{
+    display: inline-flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: center;
+    padding-bottom: 1.5%;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activedot, .dot:hover {
+  background-color: #717171;
 }
   
 
