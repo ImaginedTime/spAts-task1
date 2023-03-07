@@ -33,4 +33,3 @@ function changeslide(n){
     console.log(currentslide);
     reviews[currentslide].style.display = "grid";
 }
-changeslide(0);
