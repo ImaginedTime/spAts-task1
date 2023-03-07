@@ -16,7 +16,6 @@ header{
 
 div.navbar{
     float: right;
-    display: inline-flex;
     padding-right: 4%;
 }
 div.left-navbar{
@@ -160,7 +159,7 @@ button.Bestsellers p{
     transform: rotateY(180deg);
     justify-content: center;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 60% 20% 20%;
+    grid-template-rows: 70% 10% 20%;
 }
 .bookimg{
     height: 90%;
@@ -179,9 +178,21 @@ button.Bestsellers p{
 .booktitle{
     grid-row: 2;
 }
-.backside-bookcard p{
+.booktitle h2{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.booktitle h4{
+    margin-top: 5%;
+}
+p.book-description{
     grid-row: 1;
     grid-column: 2;
+}
+.book-price{
+    grid-column: 2;
+    grid-row: 2;
+    color:#e6e600;
 }
 .add-to-cart{
     width: 50%;
@@ -294,30 +305,68 @@ footer{
 }
 
 div.reviews-holder{
-    width: 70vw;
+    width: 60vw;
     height: 60vh;
     align-self: center;
     justify-self: center;
+    padding-bottom: 2%;
+    display: grid;
 }
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
     width: auto;
-    margin-top: -22px;
+    align-self: center;
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 5px;
     user-select: none;
+    background-color: rgba(0, 0, 26, 0.4)
 }
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    justify-self: flex-end;
+    border-radius: 5px;
 }
-  
+.prev:hover, .next:hover{
+    background-color: rgba(0, 0, 26, 0.8);
+}
+div.review{
+    display: grid;
+    grid-template-columns: 5% 30% 60% 5%;
+    grid-template-rows: 5% 15% 75% 5%;
+    width: 100%;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 40px;
+}
+div.review-img{
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    display: grid;
+}
+.reviewer-email{
+    grid-column: 3;
+    grid-row: 2;
+    padding-left: 1%;
+}
+.review-content{
+    grid-column: 3;
+    grid-row: 3;
+    padding-top: 3%;
+    font-size: 1.1em;
+}
+img.review-img{
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    width: 60%;
+    height: 60%;
+}
 
 div.review-form{
     width: 80vw;
@@ -367,11 +416,15 @@ form.review-form{
     width: 25vw;
     margin: 1vh 3vw;
 }
+div.reviews-holder{
+    width: 70vw;
+}
 }
 
 @media screen and (max-width: 920px) {
 .bookcard{
     width:35vw;
+    height:60vw;
     margin: 1vh 5vw;
 }
 .search-bar input{
@@ -380,14 +433,14 @@ form.review-form{
 .search-bar button{
     width: 10vw;
 }
-.bookcard{
-    height:60vh;
-}
 }
 
 @media screen and (min-width: 801px) {
 div.hamburger-menu{
     display: none;
+}
+div.navbar{
+    display: inline-flex !important;
 }
 }
 
@@ -423,19 +476,31 @@ header{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-  
+div.reviews-holder{
+    width: 90vw;
+} 
+div.review-content{
+    font-size: 0.9em;
+}
+div.reviewer-email{
+    font-size: 0.9em;
+}
 }
 
 @media screen and (max-width: 650px) {
 .bookcard{
     width: 40vw;
+    height: 80vw;
     margin: 1vh 3vw;
+    font-size: 0.8em;
 }
 }
 
 @media screen and (max-width: 460px) {
 .bookcard{
     width: 65vw;
+    height: 100vw;
+    font-size: 1em;
     margin: 1vh 4vw;
 }  
 .search-bar input{
@@ -473,11 +538,19 @@ div.review-form{
 .copyrights{
     font-size: 0.7em;
 }
+ 
+div.review-content{
+    font-size: 0.8em;
+}
+div.reviewer-email{
+    font-size: 0.7em;
+}
 }
 
 @media screen and (max-width: 400px) {
     .bookcard{
         width:75vw;
+        height: 130vw;
         margin: 1vh 4vw;
     }   
     div.title{
