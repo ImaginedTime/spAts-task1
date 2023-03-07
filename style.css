@@ -97,6 +97,7 @@ div#Intro h1 p{
 div#Intro p.text{
     padding: 5% 5%;
     padding-bottom: 20%;
+    margin: 0;
 }
 div#Intro a{
     width: 40%;
@@ -270,6 +271,9 @@ button.backtotop{
     right: 3vh;
     cursor: pointer;
     display: none;
+    justify-content: center;
+    align-content: center;
+    border-width: 0;
 }
 
 footer{
@@ -569,7 +573,7 @@ div#intro div{
     height: 50vh;
 }
 div#Intro h1{
-    font-size: 5ch;
+    font-size: 4.4ch;
 }
 section{
     padding-top: 10vh;
@@ -583,6 +587,7 @@ div.review-form{
  
 div.review-content{
     font-size: 0.65em;
+    padding-bottom: 7%;
 }
 div.reviewer-email{
     font-size: 0.55em;
