@@ -183,7 +183,7 @@ button.Bestsellers p{
     margin-bottom: 5%;
 }
 .booktitle h4{
-    margin-top: 5%;
+    margin-top: 10%;
 }
 p.book-description{
     grid-row: 1;
@@ -334,7 +334,7 @@ div.reviews-holder{
     background-color: rgba(0, 0, 26, 0.8);
 }
 div.review{
-    display: grid;
+    display: none;
     grid-template-columns: 5% 30% 60% 5%;
     grid-template-rows: 5% 15% 75% 5%;
     width: 100%;
@@ -343,6 +343,8 @@ div.review{
     align-self: center;
     background-color: white;
     border-radius: 40px;
+    animation-name: fade;
+    animation-duration: 2s;
 }
 div.review-img{
     grid-column: 2;
@@ -367,6 +369,11 @@ img.review-img{
     width: 60%;
     height: 60%;
 }
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
 
 div.review-form{
     width: 80vw;

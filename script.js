@@ -13,3 +13,24 @@ function scrollfunction(){
         backtotop.style.display = "none";
     }
 }
+
+var currentslide = 0;
+function changeslide(n){
+    let reviews = document.getElementsByClassName("review");
+    if ((currentslide+n) >= reviews.length){
+        currentslide = 0;
+    }
+    else if ((currentslide+n) < 0){
+        currentslide = reviews.length - 1;
+    }
+    else {
+        currentslide += n;
+    }
+    for (let i=0; i < reviews.length; i++){
+        reviews[i].style.display = "none";
+    }
+    console.log(reviews);
+    console.log(currentslide);
+    reviews[currentslide].style.display = "grid";
+}
+changeslide(0);
