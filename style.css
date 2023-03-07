@@ -24,6 +24,7 @@ div.navbar{
 div.left-navbar{
     display: flex;
     align-items: center;
+    z-index: 3;
 }
 div.navbar span{
     display: inline-block;
@@ -440,6 +441,12 @@ form.review-form{
     margin-right: 15%;
     border-radius: 10px;
 }
+@keyframes slide {
+    from {margin-top: -100%;
+    opacity: 0;}
+    to {margin-top: 0%;
+    opacity: 100%;}    
+}
 
 
 @media  screen and ((max-width:1100px) and (min-width:850px)) {
@@ -486,6 +493,7 @@ div.title{
 }
 div.left-navbar{
     flex: 0 0 98%;
+    background-color: black;
 }
 div.navbar{
     flex: 0 0 100%;
@@ -495,6 +503,9 @@ div.navbar{
     flex-direction: column;
     padding-top: 3%;
     padding-bottom: 4%;
+    animation-name: slide;
+    animation-duration: 1s;
+    z-index: 2;
 }
 div.navbar span{
     padding-top: 1%;
@@ -571,10 +582,10 @@ div.review-form{
 }
  
 div.review-content{
-    font-size: 0.8em;
+    font-size: 0.65em;
 }
 div.reviewer-email{
-    font-size: 0.7em;
+    font-size: 0.55em;
 }
 }
 
