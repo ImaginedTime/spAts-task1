@@ -342,7 +342,7 @@ div.reviews-holder{
 }
 div.review{
     display: none;
-    grid-template-columns: 5% 30% 60% 5%;
+    grid-template-columns: 3% 30% 62% 5%;
     grid-template-rows: 5% 15% 75% 5%;
     width: 100%;
     justify-self: center;
@@ -362,13 +362,14 @@ div.review-img{
 .reviewer-email{
     grid-column: 3;
     grid-row: 2;
-    padding-left: 1%;
+    padding-left: 4%;
 }
 .review-content{
     grid-column: 3;
     grid-row: 3;
     padding-top: 3%;
     font-size: 1.1em;
+    padding-left: 3%;
 }
 img.review-img{
     justify-self: center;
@@ -605,5 +606,11 @@ div.reviewer-email{
     }
     div.navbar{
         font-size: 1.5ch;
+    }
+    button.Bestsellers{
+        font-size: 2ch;
+    }
+    a.Bestsellers{
+        width: 50%;
     }
 }
