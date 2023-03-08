@@ -58,7 +58,7 @@ div.title p{
     align-self: center;
 }
 .background{
-    background-image: url(imgs/intro_bg.jpg);
+    background-image: url(imgs/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
