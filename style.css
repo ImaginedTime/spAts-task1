@@ -193,6 +193,7 @@ button.Bestsellers p{
 p.book-description{
     grid-row: 1;
     grid-column: 2;
+    font-size: 0.85em;
 }
 .book-price{
     grid-column: 2;
@@ -537,7 +538,7 @@ div.reviewer-email{
 @media screen and (max-width: 650px) {
 .bookcard{
     width: 40vw;
-    height: 80vw;
+    height: 90vw;
     margin: 1vh 3vw;
     font-size: 0.8em;
 }
@@ -546,7 +547,7 @@ div.reviewer-email{
 @media screen and (max-width: 460px) {
 .bookcard{
     width: 65vw;
-    height: 100vw;
+    height: 110vw;
     font-size: 1em;
     margin: 1vh 4vw;
 }  
