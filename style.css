@@ -1,5 +1,9 @@
 body {
     margin: 0;
+    background-image: url(imgs/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 html{
     scroll-behavior: smooth;
@@ -57,14 +61,6 @@ div.title p{
     justify-content: flex-end;
     align-self: center;
 }
-.background{
-    background-image: url(imgs/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
 div#Intro div{
     margin: 14% 15%;
     margin-top: 12%;
@@ -111,6 +107,7 @@ button.Bestsellers{
     border-radius: 15px;
     border-color: #e6e600;
     border-width: 3px;
+    cursor: pointer;
 }
 button.Bestsellers p{
     padding: 0 0;
@@ -193,7 +190,7 @@ button.Bestsellers p{
 p.book-description{
     grid-row: 1;
     grid-column: 2;
-    font-size: 0.85em;
+    font-size: 1.1em;
 }
 .book-price{
     grid-column: 2;
@@ -455,13 +452,16 @@ form.review-form{
 }
 
 
-@media  screen and ((max-width:1100px) and (min-width:850px)) {
+@media  screen and (max-width:1100px){
 .bookcard{
     width: 25vw;
     margin: 1vh 3vw;
 }
 div.reviews-holder{
     width: 70vw;
+}
+p.book-description{
+    font-size: 0.9em;
 }
 }
 
@@ -547,7 +547,7 @@ div.reviewer-email{
 @media screen and (max-width: 460px) {
 .bookcard{
     width: 65vw;
-    height: 110vw;
+    height: 100vw;
     font-size: 1em;
     margin: 1vh 4vw;
 }  
