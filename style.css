@@ -201,6 +201,9 @@ p.book-description{
     background-color:chartreuse;
     border-color: white;
 }
+.add-to-cart:focus::after{
+    content: "ed";
+}
 
 section{
     min-height: 100vh;
