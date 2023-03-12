@@ -20,9 +20,7 @@ header{
     z-index: 2;
     justify-content: space-between;
 }
-
 div.navbar{
-    float: right;
     padding-right: 4%;
 }
 div.left-navbar{
@@ -33,7 +31,6 @@ div.left-navbar{
 div.navbar span{
     display: inline-block;
     padding: 0 10px;
-    word-wrap: nowrap;
 }
 div.navbar a{
     text-decoration: none;
@@ -48,7 +45,6 @@ div.logo{
 div.title{
     font-size: 5ch;
     font-weight: bold;
-    align-items: center;
 }
 div.title p{
     display: inline;
@@ -77,7 +73,6 @@ div#Intro div{
 }
 div#Intro h1{
     font-size: 6ch;
-    align-content: center;
     margin: 0 0;
     padding: 2%;
     background-color: rgba(0, 0, 26, 1);
@@ -86,7 +81,7 @@ div#Intro h1{
     border-radius: 10px;
 }
 div#Intro h1 p{
-    color:#e6e600;
+    color:#FFED00;
     display: inline;
     padding: 0 0;;
 }
@@ -105,7 +100,7 @@ button.Bestsellers{
     background-color: #00001a;
     color: white;
     border-radius: 15px;
-    border-color: #e6e600;
+    border-color: #FFED00;
     border-width: 3px;
     cursor: pointer;
 }
@@ -113,7 +108,7 @@ button.Bestsellers p{
     padding: 0 0;
     margin: 0 0;
     display: inline;
-    color: #e6e600;
+    color: #FFED00;
 }
 
 .flex-container{
@@ -132,7 +127,6 @@ button.Bestsellers p{
 .bookcard-inner{
     height: 100%;
     width: 100%;
-    position: relative;
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
@@ -182,7 +176,6 @@ button.Bestsellers p{
 }
 .booktitle h2{
     margin-top: 5%;
-    margin-bottom: 5%;
 }
 .booktitle h4{
     margin-top: 10%;
@@ -195,7 +188,7 @@ p.book-description{
 .book-price{
     grid-column: 2;
     grid-row: 2;
-    color:#e6e600;
+    color:#FFED00;
 }
 .add-to-cart{
     width: 50%;
@@ -255,7 +248,7 @@ section#Intro{
 }
 .search-bar button:hover{
     font-size: 1.2em;
-    background-color: #e6e600;
+    background-color: #FFED00;
 }
 
 button.backtotop{
@@ -269,8 +262,6 @@ button.backtotop{
     right: 3vh;
     cursor: pointer;
     display: none;
-    justify-content: center;
-    align-content: center;
     border-width: 0;
 }
 
@@ -284,6 +275,7 @@ footer{
     height: 14vh;
     row-gap: 20%;
     margin-top: 3vh;
+    padding: 1% 0;
 }
 
 .copyrights{
@@ -291,11 +283,18 @@ footer{
     justify-content: center;
     flex-wrap: nowrap;
 }
-.copyrights span{
-    margin: 0 0.5%;
+.other-links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
-.copyrights a{
+.other-links a{
     color: grey;
+    margin: 0 1%;
+}
+.other-links a:hover{
+    color: white;
+    transition-duration: 0.25s;
 }
 .socialmedia-links{
     display: flex;
@@ -305,9 +304,11 @@ footer{
     color: white;
     text-decoration: none;
     font-size: 1.5em;
-}
-.socialmedia-links span{
     margin: 0 1%;
+}
+.socialmedia-links a:hover{
+    font-size: 2em;
+    transition: 0.25s;
 }
 
 div.reviews-holder{
@@ -450,11 +451,18 @@ form.review-form{
     to {margin-top: 0%;
     opacity: 100%;}    
 }
+@keyframes slide2 {
+    from {margin-top: 0;
+    opacity: 100%;}
+    to {margin-top: -100%;
+    opacity: 0%;}    
+}
 
 
 @media  screen and (max-width:1100px){
 .bookcard{
     width: 25vw;
+    height: 45vw;
     margin: 1vh 3vw;
 }
 div.reviews-holder{
@@ -510,7 +518,7 @@ div.navbar{
     padding-top: 3%;
     padding-bottom: 4%;
     animation-name: slide;
-    animation-duration: 1s;
+    animation-duration: 1s, 1s;
     z-index: 2;
 }
 div.navbar span{
