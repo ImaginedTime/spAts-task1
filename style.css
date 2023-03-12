@@ -627,4 +627,7 @@ div.reviewer-email{
     a.Bestsellers{
         width: 50%;
     }
+    .socialmedia-links a{
+        margin: 0 2%;
+    }
 }
