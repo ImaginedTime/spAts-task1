@@ -318,12 +318,19 @@ footer{
     transition: 0.25s;
 }
 
+.reviews-flex{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+}
 div.reviews-holder{
-    width: 60vw;
     margin: 5% 0%;
     align-self: center;
     justify-self: center;
     display: grid;
+    width: 45vw;
+    height: 100%;
 }
 .prev, .next {
     cursor: pointer;
@@ -412,44 +419,44 @@ img.review-img{
   
 
 div.review-form{
-    width: 80vw;
+    width: 45vw;
     justify-self: center;
-    height: 40vh;
     border-radius: 40px;
     background-color: rgba(227, 237, 240, 0.39);
 }
 form.review-form{
-    display: grid;
-    grid-template-columns: 5% 70% auto 5%;
-    grid-template-rows: 8% auto 14% 8%;
+    margin: 0;
     height: 100%;
+    display: grid;
+    grid-template-rows: 15% auto 15% 10%;
     justify-items: center;
     align-items: center;
 }
+.review-form-title{
+    grid-row: 1;
+}
 #review-text{
-    grid-column: 2 / span 2;
     grid-row: 2;
-    width: 95%;
-    height: 95%;
-    resize: none;
-    border-radius: 20px;
+    margin-top: 2%;
+    height: 100%;
+    width: 90%;
+    resize:vertical;
+    border-radius: 15px;
     padding-left: 3ch;
     padding-top: 1ch;
 }
 #review-email{
-    grid-column: 2;
     grid-row: 3;
+    height: 60%;
     width: 90%;
-    height: 80%;
-    border-radius: 10px;
+    border-radius: 15px;
     padding-left: 2ch;
 }
 #review-submit{
-    grid-column: 3;
-    grid-row: 3;
-    width: 80%;
+    grid-row: 4;
+    width: 35%;
     height: 70%;
-    margin-right: 15%;
+    margin-bottom: 4%;
     border-radius: 10px;
 }
 @keyframes slide {
@@ -471,9 +478,6 @@ form.review-form{
     width: 25vw;
     height: 45vw;
     margin: 1vh 3vw;
-}
-div.reviews-holder{
-    width: 70vw;
 }
 p.book-description{
     font-size: 0.9em;
@@ -539,9 +543,6 @@ header{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-div.reviews-holder{
-    width: 90vw;
-} 
 div.review-content{
     font-size: 0.9em;
 }
@@ -594,9 +595,6 @@ div#Intro h1{
 }
 section{
     padding-top: 10vh;
-}
-div.review-form{
-    width: 90vw;
 }
 .copyrights{
     font-size: 0.7em;
