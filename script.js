@@ -57,4 +57,18 @@ function init(){
         reviewholder.appendChild(dot);
     }
     setslide(0);
+
+    let atcbuttons = document.getElementsByClassName("add-to-cart");
+    for (let i=0; i<atcbuttons.length; i++){
+        atcbut = atcbuttons[i];
+        atcbut.id = `atcbutton${i}`;
+        atcbut.setAttribute("onclick", `addtocart(${i})`);
+        atcbut.classList.add("atc");
+    }
+}
+
+function addtocart(i){
+    let atcbutton = document.getElementById(`atcbutton${i}`);
+    atcbutton.classList.toggle("carted");
+    atcbutton.classList.toggle("atc");
 }

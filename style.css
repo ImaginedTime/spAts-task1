@@ -195,14 +195,18 @@ p.book-description{
     width: 50%;
     grid-row: 3;
     grid-column: 2;
-    font-weight: bold;  
+    font-weight: 900;  
     border-color: black;
+    border-radius: 7.5px;
 }
-.add-to-cart:focus{
+.atc:hover{
+    background-color: #FFED00;
+}
+.carted{
     background-color:chartreuse;
     border-color: white;
 }
-.add-to-cart:focus::after{
+.carted::after{
     content: "ed";
 }
 
@@ -387,6 +391,7 @@ div.review-img{
     padding: 0 8%;
     overflow: hidden;
     margin-bottom: 7.5%;
+    color: #717171;
 }
 img.review-img{
     border-radius: 50%;
