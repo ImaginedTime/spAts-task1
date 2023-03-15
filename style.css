@@ -209,6 +209,10 @@ p.book-description{
 .carted::after{
     content: "ed";
 }
+.carted:hover{
+    background-color: rgb(84, 166, 1);
+    color: white;
+}
 
 section{
     min-height: 100vh;
