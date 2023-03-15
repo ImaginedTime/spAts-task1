@@ -329,7 +329,6 @@ div.reviews-holder{
     align-self: center;
     justify-self: center;
     display: grid;
-    height: fit-content;
     width: 35vw;
     height: 35vw;
 }
@@ -357,7 +356,7 @@ div.reviews-holder{
 div.review{
     display: none;
     grid-template-columns: 5% auto 5%;
-    grid-template-rows: 40% 10% 40%;
+    grid-template-rows: 40% 10% 50%;
     height: 100%;
     width: 100%;
     justify-self: center;
@@ -385,6 +384,7 @@ div.review-img{
     padding-top: 3%;
     font-size: 1.1em;
     padding-left: 3%;
+    overflow: hidden;
 }
 img.review-img{
     border-radius: 50%;
@@ -438,6 +438,13 @@ form.review-form{
     grid-row: 1;
     margin-top: 1%;
     margin-bottom: 0;
+    font-size: 3ch;
+    padding: 0.1em 1em;
+    background-color: white;
+    border-radius: 2em;
+    border-color: black;
+    border-width: 3px;
+    border-style:groove;
 }
 #review-text{
     grid-row: 2;
@@ -458,10 +465,14 @@ form.review-form{
 }
 #review-submit{
     grid-row: 4;
-    width: 35%;
+    font-size: 2ch;
+    width: 32%;
     height: 70%;
     margin-bottom: 4%;
-    border-radius: 10px;
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+    background-color: #00001a;
 }
 @keyframes slide {
     from {margin-top: -100%;
