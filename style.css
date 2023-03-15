@@ -330,7 +330,8 @@ div.reviews-holder{
     justify-self: center;
     display: grid;
     width: 35vw;
-    height: 35vw;
+    height: max-content;
+    margin: auto 0;
 }
 .prev, .next {
     cursor: pointer;
@@ -355,8 +356,7 @@ div.reviews-holder{
 }
 div.review{
     display: none;
-    grid-template-columns: 5% auto 5%;
-    grid-template-rows: 40% 10% 50%;
+    grid-template-rows: auto auto auto;
     height: 100%;
     width: 100%;
     justify-self: center;
@@ -367,29 +367,35 @@ div.review{
     animation-duration: 2s;
 }
 div.review-img{
-    grid-column: 2;
     grid-row: 1;
     display: grid;
     justify-items: center;
     align-items: center;
+    background: linear-gradient(to bottom, #00001a 0%, #00001a 55%, white 55%, white 100% );
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
 }
 .reviewer-email{
-    grid-column: 2;
     grid-row: 2;
     padding-left: 4%;
+    justify-self: center;
 }
 .review-content{
-    grid-column: 2;
     grid-row: 3;
     padding-top: 3%;
     font-size: 1.1em;
-    padding-left: 3%;
+    padding: 0 8%;
     overflow: hidden;
+    margin-bottom: 7.5%;
 }
 img.review-img{
     border-radius: 50%;
-    width: 50%;
-    height: 50%;
+    width: 10vw;
+    height: 10vw;
+    margin-top: 4%;
+    border-style: solid;
+    border-color: #00001a;
+    
 }
 @keyframes fade {
     from {opacity: .4} 
@@ -423,6 +429,7 @@ div.review-form{
     width: 40vw;
     height: 35vw;
     justify-self: center;
+    resize: auto;
     border-radius: 40px;
     background-color: rgba(227, 237, 240, 0.39);
 }
