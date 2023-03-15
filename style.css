@@ -325,7 +325,6 @@ footer{
     justify-content: space-evenly;
 }
 div.reviews-holder{
-    margin: 5% 0%;
     align-self: center;
     justify-self: center;
     display: grid;
@@ -355,8 +354,8 @@ div.reviews-holder{
 }
 div.review{
     display: none;
-    grid-template-columns: 3% 30% 62% 5%;
-    grid-template-rows: 5% 15% 75% 5%;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 40% 10% 50%;
     width: 100%;
     justify-self: center;
     align-self: center;
@@ -369,16 +368,16 @@ div.review{
 }
 div.review-img{
     grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-row: 1;
     display: grid;
 }
 .reviewer-email{
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
     padding-left: 4%;
 }
 .review-content{
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 3;
     padding-top: 3%;
     font-size: 1.1em;
@@ -388,8 +387,8 @@ img.review-img{
     justify-self: center;
     align-self: center;
     border-radius: 50%;
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
 }
 @keyframes fade {
     from {opacity: .4} 
@@ -428,19 +427,21 @@ form.review-form{
     margin: 0;
     height: 100%;
     display: grid;
-    grid-template-rows: 15% auto 15% 10%;
+    grid-template-rows: 12% auto 15% 10%;
     justify-items: center;
     align-items: center;
 }
 .review-form-title{
     grid-row: 1;
+    margin-top: 1%;
+    margin-bottom: 0;
 }
 #review-text{
     grid-row: 2;
     margin-top: 2%;
     height: 100%;
     width: 90%;
-    resize:vertical;
+    resize:none;
     border-radius: 15px;
     padding-left: 3ch;
     padding-top: 1ch;
