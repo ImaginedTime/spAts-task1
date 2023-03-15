@@ -331,6 +331,7 @@ footer{
     height: max-content;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 div.reviews-holder{
     margin-top: 3%;
@@ -518,6 +519,13 @@ form.review-form{
 p.book-description{
     font-size: 0.9em;
 }
+div.reviews-holder{
+    width: 40vw;
+}
+div.review-form{
+    width: 50vw;
+    min-height: 45vw;
+}
 }
 
 @media screen and (max-width: 920px) {
@@ -531,6 +539,12 @@ p.book-description{
 }
 .search-bar button{
     width: 10vw;
+}
+div.review-form{
+    height: 50vw;
+}
+.review-form-title{
+    font-size: 2.4ch;
 }
 }
 
@@ -585,6 +599,17 @@ div.review-content{
 div.reviewer-email{
     font-size: 0.9em;
 }
+}
+
+@media screen and (max-width: 700px){
+div.reviews-holder{
+    width: 70vw;
+}
+div.review-form{
+    width: 70vw;
+    height: 70vw;
+}
+
 }
 
 @media screen and (max-width: 650px) {
@@ -643,6 +668,14 @@ div.review-content{
 div.reviewer-email{
     font-size: 0.55em;
 }
+div.reviews-holder{
+    width: 90vw;
+}
+div.review-form{
+    width: 90vw;
+    height: 95vw;
+}
+
 }
 
 @media screen and (max-width: 400px) {
@@ -665,5 +698,8 @@ div.reviewer-email{
     }
     .socialmedia-links a{
         margin: 0 2%;
+    }
+    div.review-form{
+        height: 110vw;
     }
 }
