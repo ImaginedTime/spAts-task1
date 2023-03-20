@@ -92,11 +92,10 @@ function addtocart(clsname){
 
     const bookname = clsname.slice(4).replaceAll("-", " ");
     let bookcart = JSON.parse(localStorage.bookcart);
-    if (bookcart.some((ele) => {return ele==booktitl})){
+    if (bookcart.some((ele) => {return ele==bookname})){
         bookcart = bookcart.filter((ele) => {return (ele!==bookname)});
     } else {
         bookcart.push(bookname);
-        console.log("added to cart")
     }
     localStorage.bookcart= JSON.stringify(bookcart);
 
@@ -104,5 +103,34 @@ function addtocart(clsname){
         let atcbutton = atcbuttons[i];
         atcbutton.classList.toggle("carted");
         atcbutton.classList.toggle("atc");
+    }
+    showcart(0);
+}
+
+function showcart(toggletrue){
+    const showcarts = document.getElementsByClassName("cartmenu");
+    let myCart = document.getElementById("myCart");
+    if (!showcarts[0].classList.contains("active") || !toggletrue){
+        const bookcart = JSON.parse(localStorage.bookcart);
+        let out;
+        if (bookcart.length){
+            out = "<h1><span>Your Cart</span></h1>";
+            out += "<ul class=\'cartlist\'>";
+            for (let i=0; i<bookcart.length; i++){
+                out += `<li>${bookcart[i]}</li>`;
+            }
+            out += "</ul>";
+        } else {
+            out = "<h1>Your Cart is <span>Empty</span></h1>";
         }
+        myCart.innerHTML = out;
+        myCart.style.display = "flex";
+    } else {
+        myCart.style.display = "none";
+    }
+    if (toggletrue){
+        for (let i=0; i<2; i++){
+            showcarts[i].classList.toggle("active")
+        }
+    }
 }
