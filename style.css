@@ -633,6 +633,10 @@ div.review-content{
 div.reviewer-email{
     font-size: 0.9em;
 }
+button.backtotop{
+    height: 2.5rem;
+    width: 2.5rem;
+}
 }
 
 @media screen and (max-width: 700px){
@@ -712,6 +716,9 @@ img.review-img{
     height: 20vw;
     width: 20vw;
 }
+div.title{
+    font-size: 4ch;
+}
 }
 
 @media screen and (max-width: 400px) {
@@ -721,7 +728,7 @@ img.review-img{
         margin: 1vh 4vw;
     }   
     div.title{
-        font-size: 4.1ch;
+        font-size: 3.5ch;
     }
     div.navbar{
         font-size: 1.5ch;
