@@ -78,6 +78,36 @@ div.title p{
 .hamburger-menu {
     cursor: pointer;
 }
+#myCart{
+    position: fixed;
+    top: 14vh;
+    right: 2vw;
+    width: max-content;
+    height: max-content;
+    background-color: black;
+    padding-left: 7%;
+    padding-right: 7%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    box-shadow: 5% 5% 15px white;
+}
+#myCart ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#myCart li{
+    margin-bottom: 10px;
+}
+#myCart h1 span{
+    color: #FFED00;
+}
+
 
 .flex-container#Intro{
     display: flex;
