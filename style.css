@@ -660,13 +660,12 @@ section{
 .copyrights{
     font-size: 0.7em;
 }
- 
 div.review-content{
-    font-size: 0.65em;
-    padding-bottom: 7%;
+    font-size: 0.6em;
+    padding-bottom: 2%;
 }
 div.reviewer-email{
-    font-size: 0.55em;
+    font-size: 0.65em;
 }
 div.reviews-holder{
     width: 90vw;
@@ -675,7 +674,10 @@ div.review-form{
     width: 90vw;
     height: 95vw;
 }
-
+img.review-img{
+    height: 20vw;
+    width: 20vw;
+}
 }
 
 @media screen and (max-width: 400px) {
@@ -685,7 +687,7 @@ div.review-form{
         margin: 1vh 4vw;
     }   
     div.title{
-        font-size: 4.5ch;
+        font-size: 4.1ch;
     }
     div.navbar{
         font-size: 1.5ch;
