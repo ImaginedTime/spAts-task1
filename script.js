@@ -58,17 +58,51 @@ function init(){
     }
     setslide(0);
 
-    let atcbuttons = document.getElementsByClassName("add-to-cart");
-    for (let i=0; i<atcbuttons.length; i++){
-        atcbut = atcbuttons[i];
-        atcbut.id = `atcbutton${i}`;
-        atcbut.setAttribute("onclick", `addtocart(${i})`);
-        atcbut.classList.add("atc");
+    let bookcart = [];
+    try {
+        bookcart = JSON.parse(localStorage.bookcart);
+    } catch (e) {
+        localStorage.bookcart = JSON.stringify(new Array(0));
+        bookcart = new Array(0);
     }
+
+    let atcbuttons = document.getElementsByClassName("add-to-cart");
+    let booktitle = document.querySelectorAll(".booktitle h2");
+    for (let i=0; i<atcbuttons.length; i++){
+        let atcbut = atcbuttons[i];
+        let booktitl = booktitle[i].textContent ;
+        let clsname = booktitl.replaceAll(" ", "-")
+        atcbut.classList.add(`atc-${clsname}`);
+        atcbut.setAttribute("onclick", `addtocart("atc-${clsname}")`);
+        try {
+            if (bookcart.some((ele) => {return ele==booktitl})){
+                atcbut.classList.add("carted");
+            } else {
+                atcbut.classList.add("atc");
+            }
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
 }
 
-function addtocart(i){
-    let atcbutton = document.getElementById(`atcbutton${i}`);
-    atcbutton.classList.toggle("carted");
-    atcbutton.classList.toggle("atc");
+function addtocart(clsname){
+    let atcbuttons = document.getElementsByClassName(clsname);
+
+    const bookname = clsname.slice(4).replaceAll("-", " ");
+    let bookcart = JSON.parse(localStorage.bookcart);
+    if (bookcart.some((ele) => {return ele==booktitl})){
+        bookcart = bookcart.filter((ele) => {return (ele!==bookname)});
+    } else {
+        bookcart.push(bookname);
+        console.log("added to cart")
+    }
+    localStorage.bookcart= JSON.stringify(bookcart);
+
+    for (let i=0; i<atcbuttons.length; i++){
+        let atcbutton = atcbuttons[i];
+        atcbutton.classList.toggle("carted");
+        atcbutton.classList.toggle("atc");
+        }
 }
