@@ -11,17 +11,25 @@
 <body onload="init()">
     <header>
         <div class="left-navbar">
-            <div class="logo"><img src="imgs/logo.jpg"></div>
-            <div class="title">
-                <span class="headline">
-                    <p>B</p>ook <p>M</p>agicia
-                </span>
+            <div class="left-left-navbar">
+                <div class="logo"><img src="imgs/logo.jpg"></div>
+                <div class="title">
+                    <span class="headline">
+                        <p>B</p>ook <p>M</p>agicia
+                    </span>
+                </div>
             </div>
-            <div class="hamburger-menu" onclick="togglenav()">
-                <p class="fa fa-bars"></p>
+            <div class="right-left-navbar">
+                <div class="cartmenu">
+                    <p class="fa fa-shopping-cart"></p>
+                </div>
+                <div class="hamburger-menu" onclick="togglenav()">
+                    <p class="fa fa-bars"></p>
+                </div>
             </div>
         </div>
         <div class="navbar" id="navbar" style="display: none;">
+            <span class="cartmenu atcmenu2"><p class="fa fa-shopping-cart"></p></span>
             <span><a href="#Intro" onclick="togglenav()">Intro</a></span>
             <span><a href="#BestSellers" onclick="togglenav()">BestSellers</a></span>
             <span><a href="#Recommendations" onclick="togglenav()">Recommendations</a></span>

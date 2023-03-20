@@ -28,6 +28,13 @@ div.left-navbar{
     align-items: center;
     z-index: 3;
 }
+.left-left-navbar, .right-left-navbar {
+    display: flex;
+    align-items: center;
+}
+.right-left-navbar{
+    justify-content: end;
+}
 div.navbar span{
     display: inline-block;
     padding: 0 10px;
@@ -46,10 +53,30 @@ div.logo{
 div.title{
     font-size: 5ch;
     font-weight: bold;
+    width: auto;
 }
 div.title p{
     display: inline;
     color: #FFED00;
+}
+.cartmenu{
+    color: white;
+    box-sizing: border-box;
+    font-size: 3ch;
+    height: 100%;
+}
+.atcmenu2{
+    margin-right: 0.75ch;
+}
+.cartmenu:hover{
+    color: #FFED00;
+    cursor: pointer;
+}
+.cartmenu .fa.fa-shopping-cart{
+    margin: 0;
+}
+.hamburger-menu {
+    cursor: pointer;
 }
 
 .flex-container#Intro{
@@ -89,6 +116,7 @@ div#Intro h1 p{
 div#Intro p.text{
     padding: 5% 5%;
     padding-bottom: 20%;
+    font-size: 1.1rem;
     margin: 0;
 }
 div#Intro a{
@@ -549,7 +577,7 @@ div.review-form{
 }
 
 @media screen and (min-width: 801px) {
-div.hamburger-menu{
+div.right-left-navbar{
     display: none;
 }
 div.navbar{
@@ -558,9 +586,15 @@ div.navbar{
 }
 
 @media screen and (max-width: 800px) {
-.hamburger-menu{
-    display: block;
-    margin-right: 5%;
+.right-left-navbar{
+    display: flex;
+    margin-right: 4.5%;
+}
+.cartmenu.atcmenu2 {
+    display: none;
+}
+.cartmenu {
+    margin-right: 1.5ch;
 }
 div.title{
     flex: 0 0 75%;
