@@ -1,7 +1,13 @@
 function togglenav(){
     let navbar = document.getElementById("navbar");
-    if (navbar.style.display === "none") {navbar.style.display = "flex";}
-    else {navbar.style.display = "none"}
+    if (navbar.style.display === "none") {
+        navbar.style.display = "flex";
+        document.getElementById("myCart").classList.add("myCart-low");
+    }
+    else {
+        navbar.style.display = "none";
+        document.getElementById("myCart").classList.remove("myCart-low");  
+    }
 }
 
 window.onscroll = function() {scrollfunction()};

@@ -80,19 +80,25 @@ div.title p{
 }
 #myCart{
     position: fixed;
-    top: 14vh;
+    top: 13vh;
     right: 2vw;
     width: max-content;
     height: max-content;
-    background-color: black;
-    padding-left: 7%;
-    padding-right: 7%;
+    background-color: rgba(122, 122, 136, 0.9);
+    padding-left: 5%;
+    padding-right: 5%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     box-shadow: 5% 5% 15px white;
+}
+#myCart h1 {
+    border-style: double;
+    border-radius: 20px;
+    padding: 0.5ch 2ch;
+    border-color: #00001a;
 }
 #myCart ul{
     list-style: none;
@@ -103,10 +109,12 @@ div.title p{
 }
 #myCart li{
     margin-bottom: 10px;
+    font-size: 1.07rem;
 }
 #myCart h1 span{
     color: #FFED00;
 }
+
 
 
 .flex-container#Intro{
@@ -667,6 +675,9 @@ button.backtotop{
     height: 2.5rem;
     width: 2.5rem;
 }
+div.myCart-low#myCart {
+    top: 38.5vh;
+}
 }
 
 @media screen and (max-width: 700px){
@@ -686,6 +697,9 @@ div.review-form{
     height: 90vw;
     margin: 1vh 3vw;
     font-size: 0.8em;
+}
+div.myCart-low#myCart {
+    top: 34vh;
 }
 }
 
@@ -748,6 +762,12 @@ img.review-img{
 }
 div.title{
     font-size: 4ch;
+}
+div.myCart {
+    right: auto;
+}
+div.myCart-low#myCart {
+    top: 30vh;
 }
 }
 
