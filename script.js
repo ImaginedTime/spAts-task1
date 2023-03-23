@@ -110,13 +110,13 @@ function addtocart(clsname){
         atcbutton.classList.toggle("carted");
         atcbutton.classList.toggle("atc");
     }
-    showcart(0);
+    showcart(1);
 }
 
-function showcart(toggletrue){
+function showcart(frombook){
     const showcarts = document.getElementsByClassName("cartmenu");
     let myCart = document.getElementById("myCart");
-    if (!showcarts[0].classList.contains("active") || !toggletrue){
+    if (!showcarts[0].classList.contains("active") || frombook){
         const bookcart = JSON.parse(localStorage.bookcart);
         let out;
         if (bookcart.length){
@@ -134,9 +134,13 @@ function showcart(toggletrue){
     } else {
         myCart.style.display = "none";
     }
-    if (toggletrue){
-        for (let i=0; i<2; i++){
-            showcarts[i].classList.toggle("active")
+    for (let i=0; i<2; i++){
+        if (frombook){
+            if (!showcarts[i].classList.contains("active")){
+                showcarts[i].classList.add("active");
+            }
+        } else {
+            showcarts[i].classList.toggle("active");
         }
-    }
+        }
 }
