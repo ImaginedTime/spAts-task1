@@ -14,7 +14,7 @@ window.onscroll = function() {scrollfunction()};
 function scrollfunction(){
     let backtotop = document.getElementsByClassName("backtotop")[1];
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
-        backtotop.style.display = "block";
+        backtotop.style.display = "flex";
     } else {
         backtotop.style.display = "none";
     }
