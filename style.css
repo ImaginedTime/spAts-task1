@@ -388,10 +388,10 @@ footer{
     text-decoration: none;
     font-size: 1.5em;
     margin: 0 1%;
+    transition: 0.25s;
 }
 .socialmedia-links a:hover{
-    font-size: 2em;
-    transition: 0.25s;
+    scale: 1.2;
 }
 
 .reviews-flex{
